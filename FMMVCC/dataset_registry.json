@@ -1,0 +1,11 @@
+{
+    "univariate": {
+        "SyntheticControl": {
+            "position": 0,
+            "n_clusters": 6,
+            "train_shape": 300,
+            "temporal_length": 60
+        }
+    },
+    "multivariate": {}
+}
