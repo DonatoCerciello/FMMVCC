@@ -1,0 +1,32 @@
+services:
+  notebook:
+    build:
+      context: ./dockerimg
+      dockerfile: Dockerfile
+      args:
+        UID: ${UID}
+        GID: ${GID}
+        USER: ${USER}
+        PASSWORD: ${PASSWORD}
+
+    image: donatojupyterlab
+
+    container_name: notebook_${USER}
+
+    volumes:
+      - .:/home/${USER}/PhD
+
+    ports:
+      - "${PORT}:8888"
+
+    gpus: all
+
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+
+    working_dir: /home/${USER}/PhD
+
+    restart: unless-stopped
+
+    tty: true

@@ -1,0 +1,21 @@
+name: fmmvcc_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - pytorch-cuda=12.1
+  - faiss-gpu
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - umap-learn
+  - tslearn
+  - pip:
+      - mamba-ssm
