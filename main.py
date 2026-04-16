@@ -192,8 +192,8 @@ def main():
             'm': args.m,
         }
         acc, nmi, ari, ri, fmi, f1, model = run_FMMVCC(
-            X_train,
-            X_test,
+            X_train_scaled ,
+            X_test_scaled,
             y_train,
             y_test,
             selected_file,
