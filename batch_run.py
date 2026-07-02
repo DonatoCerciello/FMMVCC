@@ -69,7 +69,7 @@ def train_and_evaluate_from_loader(train_loader, test_loader, config, logger):
     finetune_path = os.path.join(dataset_dir, "Finetuning_phase.pt")
     centers_path = os.path.join(dataset_dir, "Centers.pt")
 
-    logger.info(f"Running FCACC on dataset: {config['dataset_name']}")
+    logger.info(f"Running FMMVCC on dataset: {config['dataset_name']}")
 
     # Creation of the model
     model = FMMVCC_Model(train_loader, **config)
